@@ -1,0 +1,1155 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SABAWAFF | Dulce tradición de Tibasosa</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --crema: #fff6e9;
+  --rosado: #f7d9d6;
+  --cafe: #70452e;
+  --dorado: #e9ad55;
+  --caramelo: #bd7946;
+  --oscuro: #503222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--crema);
+  color: var(--oscuro);
+  overflow-x: hidden;
+}
+
+/* MENU SUPERIOR */
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,246,233,.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 3px 15px #8d60331c;
+}
+
+.navbar {
+  min-height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  gap: 20px;
+}
+
+.logo {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 29px;
+  font-weight: 700;
+  color: var(--cafe);
+  text-decoration: none;
+  white-space: nowrap;
+  animation: logoGlow 2s infinite alternate;
+}
+
+.logo span {
+  color: #d58a45;
+}
+
+@keyframes logoGlow {
+  from { text-shadow: 0 0 3px #f2b76c; }
+  to { text-shadow: 0 0 13px #e7a34c, 0 0 22px #f7c77f; }
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cafe);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 11px 13px;
+  border-radius: 25px;
+  transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: white;
+  background: linear-gradient(120deg,#b97846,#e9b65f);
+  box-shadow: 0 0 10px #e9ad55, 0 0 22px #e9ad55;
+  transform: translateY(-3px);
+}
+
+section {
+  padding: 100px 8%;
+  scroll-margin-top: 80px;
+}
+
+h1,h2,h3 {
+  font-family: 'Fredoka', sans-serif;
+}
+
+.titulo {
+  font-size: clamp(32px,5vw,45px);
+  color: var(--cafe);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #a26c48;
+  margin-bottom: 40px;
+}
+
+/* INICIO */
+
+#inicio {
+  min-height: 100vh;
+  padding-top: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  background:
+    radial-gradient(circle at 90% 20%,#f7d9d6 0%,transparent 30%),
+    radial-gradient(circle at 10% 90%,#f4d4a8 0%,transparent 35%),
+    var(--crema);
+}
+
+.inicio-texto {
+  flex: 1;
+}
+
+.etiqueta {
+  display: inline-block;
+  background: #f7d9d6;
+  padding: 9px 18px;
+  border-radius: 30px;
+  color: #975d4a;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.inicio-texto h1 {
+  font-size: clamp(48px,7vw,78px);
+  line-height: 1.05;
+  color: var(--cafe);
+}
+
+.inicio-texto h1 span {
+  color: #d28b48;
+}
+
+.inicio-texto p {
+  line-height: 1.9;
+  margin: 22px 0;
+  max-width: 600px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 14px 25px;
+  background: linear-gradient(120deg,#bd7946,#e8ad5b);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 5px 15px #bd794655;
+  transition: .3s;
+}
+
+.boton:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px #e9ad55;
+}
+
+.hero-imagen {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.hero-imagen img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 45% 45% 25% 25%;
+  box-shadow: 0 15px 40px #8d603333;
+  animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%,100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+/* HISTORIA */
+
+#nosotros {
+  background: #fffaf2;
+}
+
+.historia {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.historia img {
+  width: 45%;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px #80532d25;
+}
+
+.historia-texto {
+  flex: 1;
+  line-height: 1.9;
+}
+
+/* MISION Y VISION */
+
+#mision {
+  background: linear-gradient(130deg,#f9e6dc,#fff4df);
+}
+
+.contenedor-mv {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+}
+
+.tarjeta-mv {
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px #9e704222;
+  transition: .3s;
+  border-bottom: 6px solid #d9a16b;
+}
+
+.tarjeta-mv:hover {
+  transform: translateY(-10px);
+}
+
+.tarjeta-mv h3 {
+  color: #b87743;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.tarjeta-mv p {
+  line-height: 1.9;
+}
+
+/* PRODUCTO PRINCIPAL */
+
+#producto {
+  background: #fffaf2;
+}
+
+.producto-principal {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: linear-gradient(120deg,#f8e3d3,#fcefd9);
+  border-radius: 30px;
+  padding: 35px;
+}
+
+.producto-principal img {
+  width: 48%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.producto-info {
+  flex: 1;
+}
+
+.producto-info h3 {
+  font-size: 32px;
+  color: #945d37;
+  margin-bottom: 15px;
+}
+
+.producto-info p {
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+
+.etiqueta-producto {
+  background: #fff;
+  color: #a36c42;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* CATALOGO */
+
+#catalogo {
+  background: linear-gradient(135deg,#fff3e6,#f8e4dc);
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+  gap: 25px;
+}
+
+.producto-card {
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 8px 20px #88552b1c;
+  transition: .4s;
+}
+
+.producto-card:hover {
+  transform: translateY(-12px) rotate(-1deg);
+  box-shadow: 0 12px 25px #88552b33;
+}
+
+.producto-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.producto-card h3 {
+  color: #a3653b;
+  font-size: 22px;
+  margin: 15px 8px 8px;
+}
+
+.producto-card p {
+  padding: 0 15px 15px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.proximamente {
+  display: inline-block;
+  background: #f6dfd7;
+  color: #a75f4f;
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* CARRUSEL */
+
+#galeria {
+  background: #fffaf2;
+  text-align: center;
+}
+
+.carrusel {
+  max-width: 850px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px #68482a33;
+}
+
+.slides {
+  display: flex;
+  transition: transform .6s ease;
+}
+
+.slides img {
+  min-width: 100%;
+  height: 430px;
+  object-fit: cover;
+}
+
+.controles {
+  margin-top: 20px;
+}
+
+.controles button {
+  background: #bd7946;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: .3s;
+}
+
+.controles button:hover {
+  background: #e5ad5b;
+  box-shadow: 0 0 15px #e5ad5b;
+}
+
+/* PERSONAJES */
+
+#personajes {
+  background: #fae9df;
+}
+
+.personajes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+  gap: 25px;
+}
+
+.personaje {
+  text-align: center;
+  background: white;
+  padding: 25px 15px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px #88552b22;
+  transition: .4s;
+}
+
+.personaje:hover {
+  transform: translateY(-10px);
+}
+
+.dibujo {
+  font-size: 75px;
+  animation: saltar 2s infinite ease-in-out;
+}
+
+@keyframes saltar {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.personaje h3 {
+  color: #a56840;
+  margin: 12px 0;
+}
+
+/* TURISMO */
+
+#turismo {
+  background: linear-gradient(120deg,#f9e5d8,#fff3df);
+}
+
+.turismo-contenido {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.turismo-contenido img {
+  width: 45%;
+  border-radius: 25px;
+}
+
+.turismo-contenido p {
+  line-height: 1.9;
+}
+
+/* CONTACTO */
+
+#contacto {
+  text-align: center;
+  background: #714b35;
+  color: white;
+}
+
+#contacto h2 {
+  color: #ffe2b7;
+}
+
+#contacto p {
+  line-height: 2;
+}
+
+#contacto a {
+  color: #ffdfaa;
+}
+
+/* PIE */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #4f3427;
+  color: white;
+  font-size: 12px;
+}
+
+footer span {
+  color: #f5bd70;
+}
+
+/* ANIMACIONES */
+
+.revelar {
+  animation: aparecer 1s ease both;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width:850px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  nav {
+    gap: 3px;
+  }
+
+  nav a {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  #inicio,.historia,.producto-principal,.turismo-contenido {
+    flex-direction: column;
+  }
+
+  .hero-imagen img {
+    max-width: 380px;
+  }
+
+  .historia img,.producto-principal img,
+  .turismo-contenido img {
+    width: 100%;
+  }
+
+  .contenedor-mv {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 100px 6%;
+  }
+}
+
+@media(max-width:500px) {
+  .logo {
+    font-size: 25px;
+  }
+
+  nav a {
+    font-size: 10px;
+    padding: 7px;
+  }
+
+  .slides img {
+    height: 280px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+
+    <a href="#inicio" class="logo">
+      🧇 <span>SABA</span>WAFF
+    </a>
+
+    <nav>
+      <a href="#inicio" class="active">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#mision">Misión y visión</a>
+      <a href="#producto">Producto estrella</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#galeria">Galería</a>
+      <a href="#personajes">Personajes</a>
+      <a href="#turismo">Turismo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- INICIO -->
+
+<section id="inicio">
+
+  <div class="inicio-texto revelar">
+
+    <span class="etiqueta">
+       Un sabor, una tradición, una experiencia
+    </span>
+
+    <h1>
+      ¡Bienvenidos a <span>SABAWAFF!</span>
+    </h1>
+
+    <p>
+      Donde la tradición de Tibasosa se transforma en una
+      experiencia deliciosa. Descubre una propuesta
+      gastronómica innovadora que combina el sabor del
+      sabajón con la magia de los waffles.
+    </p>
+
+    <p>
+      Tradición boyacense en cada bocado.
+    </p>
+
+    <a href="#producto" class="boton">
+      Descubre nuestro producto
+    </a>
+
+  </div>
+
+  <div class="hero-imagen">
+
+    <img
+    src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?w=900"
+    alt="Deliciosos waffles con frutas y chocolate">
+
+  </div>
+
+</section>
+
+<!-- NOSOTROS -->
+
+<section id="nosotros">
+
+  <h2 class="titulo">Nuestra historia </h2>
+
+  <p class="subtitulo">
+    Un emprendimiento que nace de la creatividad y la tradición.
+  </p>
+
+  <div class="historia">
+
+    <img
+    src="somos.jpg"
+    alt="Desayuno y productos gastronómicos">
+
+    <div class="historia-texto">
+
+      <h3>¿Qué es SABAWAFF?</h3>
+
+      <p>
+        SABAWAFF es un emprendimiento creado a partir de
+        un proyecto universitario, cuyo propósito es
+        fomentar el turismo gastronómico en el municipio
+        de Tibasosa, Boyacá.
+      </p>
+
+      <p>
+        Nuestra propuesta consiste en elaborar waffles
+        con sabor a sabajón, tomando como inspiración
+        uno de los productos representativos del municipio.
+      </p>
+
+      <p>
+        Buscamos fusionar la identidad cultural, la
+        creatividad y la gastronomía, ofreciendo una
+        experiencia diferente que permita dar a conocer
+        los sabores de nuestra región.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MISION Y VISION -->
+
+<section id="mision">
+
+  <h2 class="titulo">Nuestra esencia </h2>
+
+  <p class="subtitulo">
+    La razón de ser de SABAWAFF.
+  </p>
+
+  <div class="contenedor-mv">
+
+    <div class="tarjeta-mv">
+
+      <h3> Nuestra misión</h3>
+
+      <p>
+        Ofrecer una experiencia gastronómica innovadora
+        mediante la elaboración y comercialización de
+        waffles con sabor a sabajón, resaltando la
+        identidad cultural y los sabores tradicionales
+        de Tibasosa, Boyacá. Buscamos promover el turismo
+        gastronómico, apoyar el reconocimiento de los
+        productos representativos del municipio y brindar
+        a nuestros clientes una experiencia única,
+        deliciosa y memorable.
+      </p>
+
+    </div>
+
+    <div class="tarjeta-mv">
+
+      <h3> Nuestra visión</h3>
+
+      <p>
+        A mediano y largo plazo, consolidar a SABAWAFF
+        como un emprendimiento reconocido en Tibasosa y
+        la región, logrando posicionar nuestros waffles
+        de sabajón como un producto gastronómico
+        característico del municipio. Aspiramos a ampliar
+        nuestro catálogo, fortalecer nuestra identidad
+        de marca y convertirnos en un referente de
+        innovación y turismo gastronómico en Boyacá.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PRODUCTO ESTRELLA -->
+
+<section id="producto">
+
+  <h2 class="titulo">Nuestro producto estrella ⭐</h2>
+
+  <p class="subtitulo">
+    Una combinación que despierta todos los sentidos.
+  </p>
+
+  <div class="producto-principal">
+
+    <img
+    src="cafe.jpeg"
+    alt="Waffles con acompañamientos">
+
+    <div class="producto-info">
+
+      <span class="etiqueta-producto">
+         PRODUCTO PRINCIPAL
+      </span>
+
+      <h3>Waffle de Sabajón de Café </h3>
+
+      <p>
+        Nuestro protagonista es una deliciosa creación
+        inspirada en la tradición de Tibasosa.
+      </p>
+
+      <p>
+        Un waffle suave y doradito, con el inconfundible
+        sabor del sabajón de café, acompañado de una
+        combinación de ingredientes dulces que realzan
+        su sabor y textura.
+      </p>
+
+      <p>
+        Una propuesta diferente que une el aroma del
+        café con la dulzura del sabajón en una experiencia
+        gastronómica especial.
+      </p>
+
+      <p><strong> SABAWAFF: tradición en cada bocado.</strong></p>
+
+      <a href="#catalogo" class="boton">
+        Explora lo que viene
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CATALOGO -->
+
+<section id="catalogo">
+
+  <h2 class="titulo">Nuestro próximo catálogo </h2>
+
+  <p class="subtitulo">
+    ¡Nuevos sabores están por llegar!
+  </p>
+
+  <div class="catalogo">
+
+    <div class="producto-card">
+
+      <img src="arequipe.jpeg"
+      alt="Postre con arequipe">
+
+      <h3>Waffle Arequipe</h3>
+
+      <p>
+        Una combinación dulce y cremosa,
+        con el tradicional sabor del arequipe.
+      </p>
+
+      <span class="proximamente">PRÓXIMAMENTE</span>
+
+    </div>
+
+    <div class="producto-card">
+
+      <img src="arandanos.jpeg"
+      alt="Arándanos">
+
+      <h3>Waffle Arándano</h3>
+
+      <p>
+        El toque frutal de los arándanos
+        en una propuesta llena de frescura.
+      </p>
+
+      <span class="proximamente">PRÓXIMAMENTE</span>
+
+    </div>
+
+    <div class="producto-card">
+
+      <img src="feijoba.jpeg"
+      alt="Frutas tropicales">
+
+      <h3>Waffle Feijoa</h3>
+
+      <p>
+        Inspirado en una fruta especial de
+        nuestra región, con un toque diferente.
+      </p>
+
+      <span class="proximamente">PRÓXIMAMENTE</span>
+
+    </div>
+
+    <div class="producto-card">
+
+      <img src="melocoton.jpeg"
+      alt="Postre de melocotón">
+
+      <h3>Waffle Melocotón</h3>
+
+      <p>
+        Dulzura y frescura frutal en una
+        combinación irresistible.
+      </p>
+
+      <span class="proximamente">PRÓXIMAMENTE</span>
+
+    </div>
+
+    <div class="producto-card">
+
+      <img src="brandy.jpeg"
+      alt="Postre cremoso">
+
+      <h3>Waffle Brandy</h3>
+
+      <p>
+        Una propuesta de sabor inspirada
+        en las notas aromáticas del brandy.
+      </p>
+
+      <span class="proximamente">PRÓXIMAMENTE</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALERIA Y CARRUSEL -->
+
+<section id="galeria">
+
+  <h2 class="titulo">Un mundo lleno de sabor </h2>
+
+  <p class="subtitulo">
+    Descubre la esencia dulce de SABAWAFF.
+  </p>
+
+  <div class="carrusel">
+
+    <div class="slides" id="slides">
+
+      <img src="cafe.jpeg"
+      alt="Waffles">
+
+      <img src="brandy.jpeg"
+      alt="Waffles dulces">
+
+      <img src="arandanos.jpeg"
+      alt="Postres">
+
+      <img src="arequipe.jpeg"
+      alt="Frutas frescas">
+
+    </div>
+
+  </div>
+
+  <div class="controles">
+
+    <button onclick="mover(-1)">❮</button>
+    <button onclick="mover(1)">❯</button>
+
+  </div>
+
+</section>
+
+<!-- PERSONAJES -->
+
+<section id="personajes">
+
+  <h2 class="titulo">¡Conoce nuestros personajes! </h2>
+
+  <p class="subtitulo">
+    Los pequeños protagonistas del universo SABAWAFF.
+  </p>
+
+  <div class="personajes">
+
+    <div class="personaje">
+
+      <div class="dibujo"></div>
+
+      <h3>Wafflito</h3>
+<img src="wafflito.gif" alt="imagen" style="float: left; margin-right:30px; width:325px; "> 
+      <p>
+        Nuestro waffle sonriente, el personaje
+        principal de SABAWAFF.
+      </p>
+
+    </div>
+
+    <div class="personaje">
+
+      <div class="dibujo"></div>
+
+      <h3>Don Joaquín</h3>
+<img src="joaquin.gif" alt="imagen" style="float: left; margin-right:30px; width:325px; "> 
+      <p>
+        Inspirado en el sabajón de la marca
+        Don Joaquín, símbolo de nuestra inspiración.
+      </p>
+
+    </div>
+
+    <div class="personaje">
+
+      <div class="dibujo"></div>
+
+      <h3>Chispitas</h3>
+<img src="chispitas.gif" alt="imagen" style="float: left; margin-right:30px; width:325px; "> 
+
+      <p>
+        El personaje más dulce y divertido,
+        lleno de color y alegría.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TURISMO -->
+
+<section id="turismo">
+
+  <h2 class="titulo">Tibasosa: tradición y sabor </h2>
+
+  <p class="subtitulo">
+    Un municipio que inspira nuestra propuesta.
+  </p>
+
+  <div class="turismo-contenido">
+
+    <img
+    src="tibasosa.jpeg"
+    alt="Paisaje urbano">
+
+    <div>
+
+      <h3>Una experiencia gastronómica boyacense</h3>
+
+      <p>
+        Tibasosa es un municipio de Boyacá reconocido
+        por sus tradiciones, su riqueza cultural y
+        sus productos gastronómicos.
+      </p>
+
+      <br>
+
+      <p>
+        SABAWAFF busca contribuir al turismo gastronómico
+        mediante una propuesta que transforma un sabor
+        tradicional como el sabajón en un producto
+        innovador: los waffles de sabajón.
+      </p>
+
+      <br>
+
+      <p>
+        Queremos que quienes visiten Tibasosa puedan
+        llevarse una experiencia diferente y descubrir
+        una nueva forma de disfrutar los sabores
+        de nuestra tierra.
+      </p>
+
+      <br>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=Tibasosa+Boyaca"
+      target="_blank" class="boton">
+        📍 Conoce Tibasosa
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+  <h2 class="titulo">¡Gracias por visitar SABAWAFF! </h2>
+
+  <p>
+    Una tradición convertida en innovación.
+  </p>
+
+  <br>
+
+  <p>
+    📍 Tibasosa, Boyacá, Colombia
+  </p>
+
+  <p>
+    🧇 SABAWAFF - Waffles con sabor a sabajón
+  </p>
+
+  <p>
+    Un dulce recorrido por nuestra tradición.
+  </p>
+
+  <br>
+
+  <a href="#inicio">Volver al inicio ↑</a>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 <span>SABAWAFF</span> |
+    Emprendimiento universitario |
+    Tibasosa, Boyacá.
+  </p>
+
+  <p>Hecho con 💛 y mucho sabor.</p>
+
+</footer>
+
+<script>
+
+// CARRUSEL AUTOMATICO
+
+let indice = 0;
+
+const slides = document.getElementById('slides');
+const total = slides.children.length;
+
+function actualizarCarrusel() {
+  slides.style.transform = `translateX(-${indice * 100}%)`;
+}
+
+function mover(direccion) {
+  indice = (indice + direccion + total) % total;
+  actualizarCarrusel();
+}
+
+setInterval(() => {
+  mover(1);
+}, 4000);
+
+
+// BRILLO Y SELECCION DEL MENU
+
+const enlaces = document.querySelectorAll('nav a');
+
+enlaces.forEach(enlace => {
+
+  enlace.addEventListener('click', function() {
+
+    enlaces.forEach(item => item.classList.remove('active'));
+
+    this.classList.add('active');
+
+  });
+
+});
+
+
+// CAMBIO AUTOMATICO DEL MENU AL DESPLAZARSE
+
+const secciones = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+
+  let actual = '';
+
+  secciones.forEach(seccion => {
+
+    const posicion = seccion.offsetTop - 150;
+
+    if (window.scrollY >= posicion) {
+      actual = seccion.getAttribute('id');
+    }
+
+  });
+
+  enlaces.forEach(enlace => {
+
+    enlace.classList.remove('active');
+
+    if (enlace.getAttribute('href') === '#' + actual) {
+      enlace.classList.add('active');
+    }
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
+git remote add origin https://github.com/zay2610/sabawaffle.git
+git branch -M main
+git push -u origin main
